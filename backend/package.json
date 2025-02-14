@@ -1,0 +1,33 @@
+{
+  "name": "razor-alexa",
+  "version": "1.0.0",
+  "description": "This repo consists of the backend (BE) for the payment process.",
+  "main": "index.js",
+  "scripts": {
+    "echo": "echo \"Error: no test specified && exit 1\"",
+    "start": "node ./build/index.js",
+    "dev": "tsx watch ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "SanskarOH",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase": "^11.3.1",
+    "razorpay": "^2.9.5",
+    "tsx": "^4.19.2",
+    "winston": "^3.17.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.4",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

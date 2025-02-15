@@ -12,6 +12,8 @@ const envSchema = z.object({
     storageBucket: z.string(),
     messagingSenderId : z.string(),
     appId : z.string(),
+    LOG_LEVEL : z.string(),
+    NODE_ENV : z.string(),
         
 
 
@@ -21,7 +23,7 @@ const envSchema = z.object({
 const env = envSchema.parse(process.env);
 export default {
     PORT : env.PORT,
-    firebase_apiKEY : env.firebase_apiKEY,
+    apiKEY : env.firebase_apiKEY,
     authDomain : env.authDomain,
     projectId : env.projectId,
     storageBucket : env.storageBUcket,
@@ -30,5 +32,10 @@ export default {
 
     api : {
         prefix : '/api',
+    },
+    NODE_ENV : env.NODE_ENV,
+
+    logs: {
+        level : process.env.LOG_LEVEL || 'silly',
     }
 }
